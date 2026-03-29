@@ -1,0 +1,81 @@
+# Update the repo value below before connecting Decap CMS to GitHub.
+backend:
+  name: github
+  repo: your-github-username/your-repo-name
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "packages_data"
+    label: "Tour Packages"
+    delete: false
+    files:
+      - label: "Packages"
+        name: "packages"
+        file: "content/data/packages.json"
+        format: "json"
+        fields:
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Destination", name: "destination", widget: "string" }
+              - { label: "Activity Type", name: "activity_type", widget: "string" }
+              - { label: "Budget Range", name: "budget_range", widget: "string" }
+              - { label: "Duration Days", name: "duration_days", widget: "number", value_type: "int", min: 1 }
+              - { label: "Group Size", name: "group_size", widget: "string" }
+              - { label: "Travelers Label", name: "travelers_label", widget: "string" }
+              - { label: "Price From", name: "price_from", widget: "number", value_type: "int", min: 0 }
+              - { label: "Price Original", name: "price_original", widget: "number", value_type: "int", required: false, min: 0 }
+              - { label: "Rating", name: "rating", widget: "number", value_type: "float", min: 0, max: 5, step: 0.1 }
+              - { label: "Card Image", name: "card_image", widget: "image" }
+              - { label: "Card Alt", name: "card_alt", widget: "string" }
+              - { label: "Hero Image", name: "hero_image", widget: "image" }
+              - { label: "Hero Alt", name: "hero_alt", widget: "string" }
+              - { label: "Card Description", name: "card_description", widget: "text" }
+              - { label: "Overview", name: "overview", widget: "text" }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - label: "Itinerary"
+                name: "itinerary"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Details"
+                    name: "details"
+                    widget: "list"
+                    field: { label: "Detail", name: "detail", widget: "string" }
+              - label: "Includes"
+                name: "includes"
+                widget: "list"
+                field: { label: "Include", name: "include", widget: "string" }
+              - label: "Excludes"
+                name: "excludes"
+                widget: "list"
+                field: { label: "Exclude", name: "exclude", widget: "string" }
+              - label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt", name: "alt", widget: "string" }
+              - label: "Related Slugs"
+                name: "related_slugs"
+                widget: "list"
+                field: { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Source URL", name: "source_url", widget: "string", required: false }

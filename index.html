@@ -1,0 +1,1135 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Aeon Travels | Sri Lanka Tours, Private Trips & Curated Travel</title>
+    <link href="assets/icons/aeon logo.svg" rel="icon" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#001d32",
+              "on-surface": "#1a1c1c",
+              secondary: "#006399",
+              "surface-container-low": "#f4f3f2",
+              "on-secondary-container": "#004972",
+              surface: "#faf9f8",
+              "surface-variant": "#e3e2e1",
+              error: "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              tertiary: "#6e3900",
+              "primary-container": "#006b5e",
+              "on-secondary-fixed-variant": "#004b74",
+              background: "#faf9f8",
+              "tertiary-container": "#914d00",
+              "surface-dim": "#dadad9",
+              "inverse-surface": "#2f3130",
+              "on-surface-variant": "#3e4946",
+              "on-primary-fixed-variant": "#005046",
+              "primary-fixed-dim": "#83d5c5",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#2f1500",
+              "on-tertiary-container": "#ffd0ad",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#cde5ff",
+              "outline-variant": "#bec9c5",
+              "inverse-primary": "#83d5c5",
+              "surface-container-high": "#e9e8e7",
+              "on-background": "#1a1c1c",
+              "primary-fixed": "#9ff2e1",
+              "on-tertiary-fixed-variant": "#6e3900",
+              "on-primary-fixed": "#00201b",
+              "secondary-fixed-dim": "#94ccff",
+              "on-error-container": "#93000a",
+              primary: "#005147",
+              "tertiary-fixed": "#ffdcc3",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#006b5e",
+              "secondary-container": "#67bafd",
+              "surface-container": "#eeeeed",
+              "surface-bright": "#faf9f8",
+              "on-primary-container": "#95e8d8",
+              outline: "#6e7976",
+              "surface-container-highest": "#e3e2e1",
+              "inverse-on-surface": "#f1f0f0",
+              "tertiary-fixed-dim": "#ffb77d",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(16px);
+      }
+      .editorial-shadow {
+        box-shadow: 0 20px 40px -20px rgba(0, 81, 71, 0.08);
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .mobile-menu summary::-webkit-details-marker {
+        display: none;
+      }
+      .mobile-quote-tab {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+      .quote-drawer[data-open="false"] {
+        pointer-events: none;
+      }
+      .quote-drawer[data-open="false"] .quote-drawer-panel {
+        transform: translateX(100%);
+      }
+      .quote-drawer[data-open="false"] .quote-drawer-backdrop {
+        opacity: 0;
+      }
+      .quote-drawer[data-open="true"] .quote-drawer-panel {
+        transform: translateX(0);
+      }
+      .quote-drawer[data-open="true"] .quote-drawer-backdrop {
+        opacity: 1;
+      }
+      @keyframes destinationCtaGlow {
+        0%,
+        100% {
+          transform: translateY(0);
+          box-shadow:
+            0 0 0 rgba(0, 81, 71, 0),
+            0 0 0 rgba(0, 81, 71, 0);
+        }
+        50% {
+          transform: translateY(-8px) scale(1.035);
+          box-shadow:
+            0 18px 36px rgba(0, 81, 71, 0.32),
+            0 0 26px rgba(0, 107, 94, 0.45);
+        }
+      }
+      .destination-cta {
+        animation: destinationCtaGlow 1.8s ease-in-out infinite;
+      }
+      @keyframes mobileHeroPan {
+        0% {
+          object-position: 0% center;
+        }
+        100% {
+          object-position: 100% center;
+        }
+      }
+      @keyframes desktopHeroZoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.12);
+        }
+      }
+      .hero-mobile-pan {
+        object-position: center center;
+        animation: mobileHeroPan 22s ease-in-out infinite alternate;
+      }
+      @media (min-width: 768px) {
+        .hero-mobile-pan {
+          animation:
+            mobileHeroPan 22s ease-in-out infinite alternate,
+            desktopHeroZoom 18s ease-in-out infinite alternate;
+        }
+      }
+      .hero-copy {
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.42);
+      }
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+        transition-delay: var(--reveal-delay, 0ms);
+      }
+      .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body
+    class="overflow-x-hidden bg-surface font-body text-on-surface antialiased"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl no-border shadow-sm shadow-xl shadow-teal-900/5 dark:shadow-none"
+    >
+      <nav
+        class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto"
+      >
+        <div
+          class="flex items-center gap-3 text-2xl font-extrabold text-teal-900 dark:text-teal-50 font-headline tracking-tight"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-10 w-10 shrink-0"
+            fill="none"
+            viewBox="0 0 1858.63 1575.9"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M813.72,1201.71c-42.32,22.57-152.55,73.74-293.02,53.49-17.67-2.55-209.53-32.9-306.98-179.07-32.11-48.17-39.77-87.63-102.32-176.74-31.86-45.39-61.42-80.11-81.4-102.33,31.17-3.55,75.16-7.19,127.91-6.97,55.97.23,112.31.46,153.49,11.62,8.76,2.37,16.91,5.26,24.53,8.62,32.1,82.01,80.06,162.52,150.9,231.85,82.82,81.06,234.77,183.89,321.31,158.24,1.85.43,3.71.86,5.58,1.29Z"
+                stroke-width="60"
+              />
+              <path
+                d="M852.37,1166.97c-6.51,9.86-14.37,17.98-23.68,24.05-6.32,4.12-13.2,7.23-20.55,9.4-86.54,25.65-238.49-77.18-321.31-158.24-70.84-69.33-118.8-149.84-150.9-231.85-78.21-199.8-62.29-408.59-53.76-486.76,70.6,21.82,225.05,77.26,357.9,201.57-5.08,31.35-8.03,64-8.4,97.88-2.33,214.57,99.4,453.45,220.7,543.95Z"
+                stroke-width="60"
+              />
+              <path
+                d="M1133.4,834.13c.79,158.08-76,271.96-133.39,334.98-12.77,14.03-24.59,25.54-34.37,34.46h-.01c-4.35.51-8.68.8-13.03.85-16.18.2-32.41-2.82-48.51-8.71h-.01c-12.74-11.35-27.76-25.87-43.54-43.49-58.73-65.57-128.02-174.18-129.47-322.74-.59-60.49,10.2-114.55,26.96-161.82h0c49.63-139.94,151.67-220.26,166.07-231.2,13.23,9.24,118.58,85.54,174.58,222.77,20.5,50.24,34.39,108.64,34.72,174.9Z"
+                stroke-width="60"
+              />
+              <path
+                d="M1041.58,1178.28c-2.72-.16-5.4-.39-8.02-.68,1.21-.78,2.41-1.58,3.62-2.39,1.44,1.01,2.9,2.03,4.4,3.07Z"
+                stroke-width="60"
+              />
+              <path
+                d="M1191.11,964.79c-40.39,94.06-94.85,170.8-153.93,210.42-1.21.81-2.41,1.61-3.62,2.39h-.01c-22.19,14.26-44.99,23.26-67.91,25.97,9.78-8.92,21.6-20.43,34.37-34.46,57.39-63.02,134.18-176.9,133.39-334.98-.33-66.26-14.22-124.66-34.72-174.9-56-137.23-161.35-213.53-174.58-222.77-14.4,10.94-116.44,91.26-166.07,231.19h0c-16.76,47.28-27.55,101.34-26.96,161.83,1.45,148.56,70.74,257.17,129.47,322.74,15.78,17.62,30.8,32.14,43.54,43.49-17.47-6.37-34.77-16.11-51.71-28.74-121.3-90.5-223.03-329.38-220.7-543.95.37-33.88,3.32-66.53,8.4-97.88C686.34,239.07,908.69,60.52,947.95,30c46.23,36.47,242.84,198.44,298.29,460.07,6.64,31.28,11.25,63.98,13.34,98.07,7.85,127.79-20.31,264.52-68.47,376.65Z"
+                stroke-width="60"
+              />
+              <path
+                d="M1542.22,803.2c-19.66,46.74-46.1,93.03-81.2,136.95-114.04,142.71-306.91,244.82-419.43,238.13h-.01c-1.5-1.04-2.96-2.06-4.4-3.07,59.08-39.62,113.54-116.36,153.93-210.42,48.16-112.13,76.32-248.86,68.47-376.65-2.09-34.09-6.7-66.79-13.34-98.07,115.63-101.68,238.54-153.37,319.43-180.16,11.01,40.89,69.56,272.23-23.45,493.29Z"
+                stroke-width="60"
+              />
+              <path
+                d="M1828.63,809.65c-20.03,66.48-59.34,160.65-139.53,248.84-42.62,46.87-193.45,214.19-413.96,202.33-104.16-5.61-184.84-49.06-233.55-82.54,112.52,6.69,305.39-95.42,419.43-238.13,35.1-43.92,61.54-90.21,81.2-136.95,103.39-20.31,170.18-14.38,191.06-12.15,39.4,4.2,71.97,11.91,95.35,18.6Z"
+                stroke-width="60"
+              />
+              <path
+                d="M620.68,1380.44c38.05,14.78,92.48,38.78,153.19,76.6,94.02,58.57,103.8,88.42,147.06,88.85,66.31.67,85.37-69.04,202.21-131.74,47.99-25.76,91.25-38.93,119.49-45.96"
+                stroke-width="60"
+              />
+              <path
+                d="M930.12,1288.53c-46.79-4.22-92.6,52.76-79.66,101.11,8.25,30.82,40.38,58.11,76.6,55.15,40.87-3.34,69.39-43.76,67.4-82.72-1.88-36.89-31.01-70.53-64.34-73.53Z"
+                stroke-width="40"
+              />
+            </g>
+          </svg>
+          <span>Aeon Travels</span>
+        </div>
+        <div class="hidden md:flex items-center gap-10">
+          <a
+            class="font-headline text-teal-700 dark:text-teal-400 border-b-2 border-teal-700 dark:border-teal-400 pb-1 font-bold tracking-tight"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-headline font-bold tracking-tight text-zinc-600 dark:text-zinc-400 hover:text-teal-800 dark:hover:text-teal-200 transition-colors hover:scale-105 transition-transform duration-300"
+            href="trips.html"
+            >Trips &amp; Tours</a
+          >
+          <a
+            class="font-headline font-bold tracking-tight text-zinc-600 dark:text-zinc-400 hover:text-teal-800 dark:hover:text-teal-200 transition-colors hover:scale-105 transition-transform duration-300"
+            href="stories.html"
+            >Success Stories</a
+          >
+          <a
+            class="font-headline font-bold tracking-tight text-zinc-600 dark:text-zinc-400 hover:text-teal-800 dark:hover:text-teal-200 transition-colors hover:scale-105 transition-transform duration-300"
+            href="contact.html"
+            >Contact Us</a
+          >
+        </div>
+        <div class="flex items-center gap-3 md:gap-6">
+          <button
+            class="hidden md:inline-flex material-symbols-outlined text-teal-900 dark:text-teal-100 hover:scale-105 transition-transform"
+            data-site-search-open
+            data-icon="search"
+          >
+            search
+          </button>
+          <a
+            class="hidden md:inline-block bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold text-sm tracking-wide hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20"
+            href="contact.html"
+          >
+            Book Now
+          </a>
+          <details class="mobile-menu relative md:hidden">
+            <summary
+              class="list-none cursor-pointer rounded-full p-2 text-teal-900"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </summary>
+            <div
+              class="absolute right-0 top-14 w-64 rounded-2xl border border-teal-900/10 bg-white p-4 shadow-2xl shadow-teal-900/10"
+            >
+              <div class="flex flex-col gap-1">
+                <a
+                  class="rounded-xl px-4 py-3 font-headline font-bold text-teal-900 hover:bg-teal-50"
+                  href="index.html"
+                  >Home</a
+                >
+                <a
+                  class="rounded-xl px-4 py-3 font-headline font-bold text-teal-900 hover:bg-teal-50"
+                  href="trips.html"
+                  >Trips &amp; Tours</a
+                >
+                <a
+                  class="rounded-xl px-4 py-3 font-headline font-bold text-teal-900 hover:bg-teal-50"
+                  href="stories.html"
+                  >Success Stories</a
+                >
+                <a
+                  class="rounded-xl px-4 py-3 font-headline font-bold text-teal-900 hover:bg-teal-50"
+                  href="contact.html"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+    <button
+      class="mobile-quote-tab fixed right-0 top-1/2 z-40 -translate-y-1/2 rounded-l-[2rem] bg-primary px-3 py-5 text-sm font-headline font-extrabold text-white shadow-[0_0_24px_rgba(0,81,71,0.35)] md:hidden"
+      data-quote-open
+      type="button"
+    >
+      Get a Quote
+    </button>
+    <div class="quote-drawer fixed inset-0 z-50 md:hidden" data-open="false">
+      <button
+        class="quote-drawer-backdrop absolute inset-0 bg-black/30 transition-opacity duration-300"
+        data-quote-close
+        type="button"
+      ></button>
+      <div
+        class="quote-drawer-panel absolute right-0 top-0 h-full w-[22rem] max-w-[90vw] bg-white p-6 shadow-2xl transition-transform duration-300"
+      >
+        <div class="mb-6 flex items-start justify-between gap-4">
+          <div>
+            <p
+              class="text-xs font-bold uppercase tracking-[0.3em] text-teal-600"
+            >
+              Quick Enquiry
+            </p>
+            <h3
+              class="mt-2 font-headline text-2xl font-extrabold text-teal-950"
+            >
+              Get a Quote
+            </h3>
+            <p class="mt-2 text-sm text-zinc-500">
+              Share a few details and our team will follow up.
+            </p>
+          </div>
+          <button
+            class="rounded-full p-2 text-teal-900"
+            data-quote-close
+            type="button"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <form class="space-y-4">
+          <input
+            class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            placeholder="Your name"
+            type="text"
+          />
+          <input
+            class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            placeholder="Email address"
+            type="email"
+          />
+          <input
+            class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            placeholder="Trip interest"
+            type="text"
+          />
+          <textarea
+            class="h-28 w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            placeholder="Tell us what you need"
+          ></textarea>
+          <button
+            class="w-full rounded-2xl bg-teal-900 px-4 py-3 font-headline text-sm font-bold text-white"
+            type="submit"
+          >
+            Request Quote
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="site-search fixed inset-0 z-[60] hidden" data-site-search>
+      <button
+        class="absolute inset-0 bg-primary/30 backdrop-blur-sm"
+        data-site-search-close
+        type="button"
+      ></button>
+      <div
+        class="relative mx-auto mt-28 hidden w-[min(42rem,calc(100%-4rem))] rounded-[2rem] bg-white p-8 shadow-2xl md:block"
+      >
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.3em] text-teal-600">
+              Desktop Search
+            </p>
+            <h3 class="mt-2 font-headline text-3xl font-extrabold text-teal-950">
+              Find a Page or Package
+            </h3>
+            <p class="mt-2 text-sm text-zinc-500">
+              Search destinations, package names, or jump to a page directly.
+            </p>
+          </div>
+          <button
+            class="rounded-full p-2 text-teal-900"
+            data-site-search-close
+            type="button"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <form class="mt-6 flex gap-3">
+          <input
+            class="w-full rounded-full border border-zinc-200 px-5 py-4 text-base outline-none transition focus:border-teal-500"
+            name="site-search"
+            placeholder="Search Kandy, safari, stories, contact..."
+            type="search"
+          />
+          <button
+            class="rounded-full bg-primary px-6 py-4 font-headline font-bold text-white"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button class="rounded-full bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900" data-search-link="index.html" type="button">Home</button>
+          <button class="rounded-full bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900" data-search-link="trips.html" type="button">Trips &amp; Tours</button>
+          <button class="rounded-full bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900" data-search-link="stories.html" type="button">Stories</button>
+          <button class="rounded-full bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900" data-search-link="contact.html" type="button">Contact</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[972px] w-full flex items-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Sigiriya Rock Fortress"
+            class="hero-mobile-pan w-full h-full object-cover"
+            data-alt="cinematic wide shot of Sigiriya Rock Fortress in Sri Lanka surrounded by lush green jungle at sunrise with soft golden mist"
+            src="https://media.cntravellerme.com/photos/67d18d96d34064451a14d52e/4:3/w_6696,h_5022,c_limit/SRI%20LANKA%202025%20GettyImages-1643739335.jpg"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"
+          ></div>
+        </div>
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+          <div class="max-w-2xl">
+            <span
+              class="inline-block px-4 py-1.5 rounded-full bg-primary-fixed-dim/30 backdrop-blur-md text-on-primary-fixed-variant text-sm font-bold tracking-widest uppercase mb-6"
+            >
+              The Curated Expedition
+            </span>
+            <div class="mb-6 flex items-center gap-4 text-white">
+              <span
+                class="inline-block h-12 w-12 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/icons/aeon logo.svg'); filter: brightness(0) invert(1)"
+              ></span>
+            </div>
+            <h1
+              class="font-headline text-6xl md:text-8xl font-extrabold text-white leading-[1.1] mb-8 tracking-tighter text-balance"
+            >
+              Discover the Island With
+              <span class="text-primary-fixed-dim">Aeon</span>
+            </h1>
+            <p
+              class="hero-copy mb-10 max-w-lg rounded-2xl bg-black/20 px-4 py-3 text-xl text-white font-body leading-relaxed backdrop-blur-[2px] md:bg-black/10"
+            >
+              We plan tropical escapes and cultural journeys that show you the
+              true soul of our island
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                class="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3"
+                href="trips.html"
+              >
+                Start Your Journey
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+              <a
+                class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-white/20 transition-all"
+                href="stories.html"
+              >
+                Our Stories
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stats & About Section -->
+      <section class="py-24 bg-surface">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+              <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+                <img
+                  alt="Traditional Sri Lankan Culture"
+                  class="w-full h-full object-cover"
+                  data-alt="vibrant close-up of a traditional Sri Lankan Kandyan dancer in intricate silver costume with warm stage lighting and deep shadows"
+                  src="assets/images/rate-bg.png"
+                />
+              </div>
+              <div
+                class="absolute bottom-4 right-4 w-56 p-6 bg-surface-container-lowest rounded-xl shadow-2xl shadow-primary/10 border border-outline-variant/10 sm:w-64 sm:p-8 lg:-bottom-10 lg:-right-10"
+              >
+                <p
+                  class="font-headline text-4xl font-extrabold text-primary mb-2"
+                >
+                  4.9/5
+                </p>
+                <div class="flex gap-1 text-tertiary mb-3">
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                </div>
+                <p
+                  class="text-sm font-label text-on-surface-variant leading-snug"
+                >
+                  Average traveller rating across 2,000+ curated expeditions.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2
+                class="font-headline text-4xl md:text-5xl font-extrabold text-primary mb-8 leading-tight"
+              >
+                We don't just book trips. We weave narratives.
+              </h2>
+              <p
+                class="text-lg text-on-surface-variant font-body mb-12 leading-relaxed"
+              >
+                Aeon Travels is a boutique expedition firm dedicated to the art
+                of Sri Lankan discovery. We believe travel should be an
+                intentional pause—a curated blend of luxury comfort and raw,
+                authentic immersion into the island's vibrant soul.
+              </p>
+              <div class="grid grid-cols-2 gap-8 mb-12">
+                <div class="space-y-2">
+                  <p class="font-headline text-3xl font-bold text-tertiary">
+                    500+
+                  </p>
+                  <p
+                    class="text-sm font-label uppercase tracking-widest text-outline"
+                  >
+                    Bespoke Tours
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <p class="font-headline text-3xl font-bold text-tertiary">
+                    12
+                  </p>
+                  <p
+                    class="text-sm font-label uppercase tracking-widest text-outline"
+                  >
+                    Award Wins
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <p class="font-headline text-3xl font-bold text-tertiary">
+                    100%
+                  </p>
+                  <p
+                    class="text-sm font-label uppercase tracking-widest text-outline"
+                  >
+                    Local Guides
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <p class="font-headline text-3xl font-bold text-tertiary">
+                    15y
+                  </p>
+                  <p
+                    class="text-sm font-label uppercase tracking-widest text-outline"
+                  >
+                    Experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Top Destinations Section (Editorial Bento Grid) -->
+      <section class="py-24 bg-surface-container-low overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+          >
+            <div class="max-w-xl">
+              <span
+                class="text-secondary font-bold font-label tracking-widest uppercase text-sm mb-4 block"
+                >Selected Highlights</span
+              >
+              <h2
+                class="font-headline text-5xl font-extrabold text-primary tracking-tight"
+              >
+                Top Destinations
+              </h2>
+            </div>
+            <div class="max-w-sm">
+              <p class="text-on-surface-variant font-body">
+                From the misty tea trails to colonial coastal charms, discover
+                the locations our travellers love most.
+              </p>
+              <a
+                class="destination-cta mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-headline text-sm font-bold text-white transition-all duration-300 hover:scale-105"
+                href="trips.html"
+              >
+                View Our Destinations
+                <span class="material-symbols-outlined text-base"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 min-h-[700px]">
+            <!-- Kandy: Large Feature -->
+            <div
+              class="md:col-span-7 group relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                alt="Kandy City"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="panoramic view of Kandy city and lake in Sri Lanka during twilight with city lights reflecting in the water and green hills background"
+                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/ec/2f.jpg"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6 pr-20 md:p-10 md:pr-10">
+                <h3
+                  class="font-headline text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4"
+                >
+                  Kandy
+                </h3>
+                <p
+                  class="text-sm md:text-base text-white/80 max-w-[14rem] md:max-w-md leading-relaxed mb-4 md:mb-6"
+                >
+                  The spiritual capital where ancient temple drums echo through
+                  misty hilltops and vibrant spice gardens.
+                </p>
+                <a
+                  class="bg-white/20 backdrop-blur-md text-white px-5 md:px-6 py-2.5 rounded-full text-sm font-bold border border-white/30 hover:bg-white hover:text-primary transition-all inline-block"
+                  href="trips.html?q=kandy"
+                >
+                  Explore Kandy
+                </a>
+              </div>
+            </div>
+            <!-- Nuwara Eliya: Top Right -->
+            <div
+              class="md:col-span-5 group relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                alt="Nuwara Eliya Tea Plucker"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="lush green rolling hills of a tea plantation in Nuwara Eliya with soft morning mist and bright morning sunlight filtering through the leaves"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAENO2luO9cbvmqj7vvewzlN3yyuZRD9dgEvnWi4YHoXA64MsTlxwci33lXKLuTW9_O9DHyQOPtayRkhk7OHApmilUWaK2RcEzCLohaaoz6jSM7WSt56bDrSEm0wfaYB5ijssGzt9q4ujru9TjoZyx3T6YdahtP3_lnVres3IdgzUJM_maeVPAZgan_CETQQqgF-mBFqJa4KFsghyaTHxa3lBbh4cmTO7MkVZDBpBZ2Sl4zBMZubSU90KMO0FLlBBigzPkhdrj1Pm8"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-tertiary/90 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8">
+                <h3 class="font-headline text-3xl font-bold text-white mb-2">
+                  Nuwara Eliya
+                </h3>
+                <p class="text-white/80 text-sm max-w-xs mb-4">
+                  Misty tea estates and colonial charm at the island's highest
+                  peaks.
+                </p>
+                <a
+                  class="text-white font-bold text-sm underline underline-offset-8 decoration-tertiary-container hover:text-tertiary-container transition-colors"
+                  href="trips.html?q=nuwara"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            <!-- Galle: Bottom Right -->
+            <div
+              class="md:col-span-5 group relative overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                alt="Galle Fort Lighthouse"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="white iconic lighthouse of Galle Fort against a bright blue sky and turquoise ocean with colonial ramparts in the foreground"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhttELsm6e08T6R2YgYEVs4gGDmU0BNq2T4Nn0zoA79za9VyYbt9nfa84Ha6k7TbW0F0k6HAd_efT63SqPhZzAlinqJmnQCH_hE0ytW47tPqoupLHgepfiUzucAONi4NQcT5MHAis19b97JYcFTtlrLCA8cQWJamZprqNIX07z01aeSybqTSMkELP_97156L37kW7zE2RQqbceK-RWmsLpkpbZMXtFQBh756K9IEIGjcigAAsZ9SWj8_eRmZHc46NdkOFVtHFb8w"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8">
+                <h3 class="font-headline text-3xl font-bold text-white mb-2">
+                  Galle
+                </h3>
+                <p class="text-white/80 text-sm max-w-xs mb-4">
+                  A poetic fortress where Dutch architecture meets the rhythm of
+                  the Indian Ocean.
+                </p>
+                <a
+                  class="text-white font-bold text-sm underline underline-offset-8 decoration-secondary-fixed-dim hover:text-secondary-fixed-dim transition-colors"
+                  href="trips.html?q=galle"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section (Card Layout) -->
+      <section class="py-24 bg-surface">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="font-headline text-5xl font-extrabold text-primary mb-6">
+              Our Expeditions
+            </h2>
+            <p class="text-on-surface-variant text-lg">
+              Every Aeon journey is categorized by its soul. Choose the
+              narrative that speaks to your heart.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Service 1 -->
+            <div
+              class="p-10 rounded-2xl bg-surface-container-low transition-all duration-300 hover:-translate-y-2 hover:bg-surface-container border border-transparent hover:border-primary/10 group"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-on-primary-container mb-8 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >temple_hindu</span
+                >
+              </div>
+              <h3 class="font-headline text-2xl font-bold text-primary mb-4">
+                Cultural Tours
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed mb-8">
+                Trace the lineage of kingdoms through ancient ruins, sacred
+                relics, and living traditions that have survived millennia.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all"
+                href="trips.html?activity=Cultural%20Heritage"
+              >
+                Explore Heritage
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="p-10 rounded-2xl bg-surface-container-low transition-all duration-300 hover:-translate-y-2 hover:bg-surface-container border border-transparent hover:border-primary/10 group"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container mb-8 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >beach_access</span
+                >
+              </div>
+              <h3 class="font-headline text-2xl font-bold text-primary mb-4">
+                Beach Escapes
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed mb-8">
+                From surf-heavy breaks to secluded turquoise lagoons, find your
+                perfect coastal sanctuary along the Indian Ocean.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all"
+                href="trips.html?activity=Surfing%20%26%20Coastal"
+              >
+                Ocean Retreats
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="p-10 rounded-2xl bg-surface-container-low transition-all duration-300 hover:-translate-y-2 hover:bg-surface-container border border-transparent hover:border-primary/10 group"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl bg-tertiary-container flex items-center justify-center text-on-tertiary-container mb-8 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl">eco</span>
+              </div>
+              <h3 class="font-headline text-2xl font-bold text-primary mb-4">
+                Wildlife Safaris
+              </h3>
+              <p class="text-on-surface-variant leading-relaxed mb-8">
+                Venture into the heart of Yala or Udawalawe to witness leopards,
+                elephants, and rare endemic birdlife in their natural habitat.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-4 transition-all"
+                href="trips.html?activity=Wildlife%20Safari"
+              >
+                Go Into the Wild
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Banner -->
+      <section class="py-20 px-8">
+        <div
+          class="max-w-screen-2xl mx-auto relative rounded-[2.5rem] overflow-hidden bg-primary px-8 py-20 md:py-32 text-center shadow-2xl shadow-primary/30"
+        >
+          <div class="absolute inset-0 overflow-hidden opacity-20">
+            <img
+              alt="Sri Lanka Background"
+              class="w-full h-full object-cover scale-110"
+              data-alt="abstract artistic shot of blue ocean waves crashing with white sea foam and golden sunlight reflections"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrffzFL-cP9WV3gX4HVjHAMZCW6cCqUkqE58_XPKxSAsjDXAlBR0at7Az22Ui06LH-cA1yJ33By2EpFo6qmvzgKieZ7-rNTZ9UCuELPMmHz3faGKDYTqu25uyeQJZUtGZhf9YO_9k0qjKhbzgXh5YJCWPXAp396BCH2D6XEbmgQSgo2NSHDrd_GHnGK9aDeblbEdkiXAlkVfZ2Wev_53EPcLR49tvQ75Pz4mEW3manDxmQpQ9OuYIK5W3LoUf78Og2A0jUKHK_ew"
+            />
+          </div>
+          <div class="relative z-10 max-w-3xl mx-auto">
+            <h2
+              class="font-headline text-4xl md:text-6xl font-extrabold text-white mb-8 tracking-tight"
+            >
+              Your Story Starts in the Pearl of the Indian Ocean.
+            </h2>
+            <p class="text-white/80 text-xl font-body mb-12">
+              Limited availability for our exclusive 'Winter Sun' expeditions.
+              Secure your private itinerary today.
+            </p>
+            <a
+              class="inline-block bg-primary-fixed text-on-primary-fixed px-12 py-5 rounded-full font-headline font-bold text-lg hover:bg-primary-fixed-dim transition-colors shadow-xl shadow-black/20"
+              href="contact.html"
+            >
+              Customize Your Trip
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full pt-16 pb-8 bg-zinc-50 dark:bg-zinc-950 font-['Manrope'] text-sm leading-relaxed text-teal-900 dark:text-teal-100 bg-zinc-100 dark:bg-zinc-900 flat no-shadows"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-screen-2xl mx-auto"
+      >
+        <div>
+          <div class="text-xl font-bold text-teal-950 dark:text-teal-50 mb-4">
+            Aeon Travels
+          </div>
+          <p class="text-zinc-500 dark:text-zinc-400 max-w-xs mb-6">
+            Curating the most authentic and luxury expeditions across the island
+            of Sri Lanka.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 transition-all"
+              href="index.html"
+            >
+              <span class="material-symbols-outlined text-teal-900"
+                >public</span
+              >
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 transition-all"
+              href="stories.html"
+            >
+              <span class="material-symbols-outlined text-teal-900"
+                >camera_alt</span
+              >
+            </a>
+            <a
+              class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 transition-all"
+              href="contact.html"
+            >
+              <span class="material-symbols-outlined text-teal-900">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-teal-950 dark:text-teal-50 mb-6 uppercase tracking-widest text-xs"
+          >
+            Explore
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-zinc-500 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400 hover:underline decoration-teal-500/30 underline-offset-4 transition-all ease-in-out"
+                href="trips.html"
+                >Destinations</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-zinc-500 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400 hover:underline decoration-teal-500/30 underline-offset-4 transition-all ease-in-out"
+                href="trips.html"
+                >Private Tours</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-zinc-500 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400 hover:underline decoration-teal-500/30 underline-offset-4 transition-all ease-in-out"
+                href="contact.html"
+                >Sustainability</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-teal-950 dark:text-teal-50 mb-6 uppercase tracking-widest text-xs"
+          >
+            Support
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-zinc-500 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400 hover:underline decoration-teal-500/30 underline-offset-4 transition-all ease-in-out"
+                href="contact.html"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-zinc-500 dark:text-zinc-400 hover:text-teal-600 dark:hover:text-teal-400 hover:underline decoration-teal-500/30 underline-offset-4 transition-all ease-in-out"
+                href="contact.html"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-teal-950 dark:text-teal-50 mb-6 uppercase tracking-widest text-xs"
+          >
+            Join Our Journey
+          </h4>
+          <p class="text-zinc-500 dark:text-zinc-400 mb-6">
+            Subscribe to receive curated travel guides and hidden gems twice a
+            month.
+          </p>
+          <div class="flex gap-2">
+            <input
+              class="bg-white border-none rounded-full px-4 py-2 w-full text-sm focus:ring-2 focus:ring-primary"
+              placeholder="Your email"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition-all"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 text-center max-w-screen-2xl mx-auto px-8"
+      >
+        <p class="text-zinc-400 dark:text-zinc-600">
+          © 2026 Aeon Travels &amp; Tours. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const modal = document.querySelector("[data-site-search]");
+        const openButtons = document.querySelectorAll("[data-site-search-open]");
+        if (!modal || !openButtons.length) return;
+
+        const input = modal.querySelector('input[name="site-search"]');
+        const form = modal.querySelector("form");
+        const closeButtons = modal.querySelectorAll("[data-site-search-close]");
+        const quickLinks = modal.querySelectorAll("[data-search-link]");
+        const directRoutes = {
+          home: "index.html",
+          index: "index.html",
+          trips: "trips.html",
+          tours: "trips.html",
+          packages: "trips.html",
+          stories: "stories.html",
+          story: "stories.html",
+          contact: "contact.html",
+          inquiry: "contact.html",
+          enquire: "contact.html",
+          quote: "contact.html",
+        };
+
+        const closeSearch = () => {
+          modal.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        };
+
+        const openSearch = () => {
+          modal.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+          input?.focus();
+          input?.select();
+        };
+
+        const routeSearch = (value) => {
+          const term = value.trim();
+          if (!term) {
+            window.location.href = "trips.html";
+            return;
+          }
+
+          const normalized = term.toLowerCase();
+          if (directRoutes[normalized]) {
+            window.location.href = directRoutes[normalized];
+            return;
+          }
+
+          window.location.href = `trips.html?q=${encodeURIComponent(term)}`;
+        };
+
+        openButtons.forEach((button) => {
+          button.addEventListener("click", openSearch);
+        });
+
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", closeSearch);
+        });
+
+        quickLinks.forEach((button) => {
+          button.addEventListener("click", () => {
+            window.location.href = button.dataset.searchLink;
+          });
+        });
+
+        form?.addEventListener("submit", (event) => {
+          event.preventDefault();
+          routeSearch(input?.value || "");
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+            closeSearch();
+          }
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const drawer = document.querySelector(".quote-drawer");
+        const openButton = document.querySelector("[data-quote-open]");
+        if (!drawer || !openButton) return;
+        const closeButtons = drawer.querySelectorAll("[data-quote-close]");
+        const setOpen = (open) => {
+          drawer.dataset.open = open ? "true" : "false";
+          document.body.classList.toggle("overflow-hidden", open);
+        };
+        openButton.addEventListener("click", () => setOpen(true));
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", () => setOpen(false));
+        });
+        drawer.querySelector("form")?.addEventListener("submit", (event) => {
+          event.preventDefault();
+          setOpen(false);
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const textBlocks = document.querySelectorAll(
+          "main section:not(:first-of-type) h2, main section:not(:first-of-type) h3, main section:not(:first-of-type) p"
+        );
+        if (!textBlocks.length) return;
+
+        textBlocks.forEach((element, index) => {
+          element.classList.add("scroll-reveal");
+          element.style.setProperty("--reveal-delay", `${(index % 4) * 90}ms`);
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px",
+          }
+        );
+
+        textBlocks.forEach((element) => observer.observe(element));
+      })();
+    </script>
+  </body>
+</html>
