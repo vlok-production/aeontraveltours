@@ -257,11 +257,20 @@
             <span class="material-symbols-outlined">close</span>
           </button>
         </div>
-        <form class="space-y-4">
-          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" placeholder="Your name" type="text" />
-          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" placeholder="Email address" type="email" />
-          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" placeholder="Trip interest" type="text" />
-          <textarea class="h-28 w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" placeholder="Tell us what you need"></textarea>
+        <form
+          action="https://api.web3forms.com/submit"
+          class="space-y-4"
+          method="POST"
+        >
+          <input
+            name="access_key"
+            type="hidden"
+            value="cc1405ee-425d-4b21-a4b7-c76cadc9d568"
+          />
+          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" name="name" placeholder="Your name" required type="text" />
+          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" name="email" placeholder="Email address" required type="email" />
+          <input class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" name="subject" placeholder="Trip interest" required type="text" />
+          <textarea class="h-28 w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500" name="message" placeholder="Tell us what you need" required></textarea>
           <button class="w-full rounded-2xl bg-teal-900 px-4 py-3 font-headline text-sm font-bold text-white" type="submit">Request Quote</button>
         </form>
       </div>
@@ -340,7 +349,16 @@
           <h2 class="text-3xl font-bold text-primary mb-8 tracking-tight">
             Send us a Message
           </h2>
-          <form class="space-y-6">
+          <form
+            action="https://api.web3forms.com/submit"
+            class="space-y-6"
+            method="POST"
+          >
+            <input
+              name="access_key"
+              type="hidden"
+              value="cc1405ee-425d-4b21-a4b7-c76cadc9d568"
+            />
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label
@@ -351,7 +369,9 @@
                 <input
                   class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
                   id="name"
+                  name="name"
                   placeholder="John Doe"
+                  required
                   type="text"
                 />
               </div>
@@ -364,7 +384,9 @@
                 <input
                   class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
                   id="email"
+                  name="email"
                   placeholder="john@example.com"
+                  required
                   type="email"
                 />
               </div>
@@ -378,7 +400,9 @@
               <input
                 class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
                 id="subject"
+                name="subject"
                 placeholder="Plan my bespoke tour"
+                required
                 type="text"
               />
             </div>
@@ -391,7 +415,9 @@
               <textarea
                 class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
                 id="message"
+                name="message"
                 placeholder="Tell us about your dream destination..."
+                required
                 rows="6"
               ></textarea>
             </div>
@@ -740,10 +766,6 @@
         openButton.addEventListener("click", () => setOpen(true));
         closeButtons.forEach((button) => {
           button.addEventListener("click", () => setOpen(false));
-        });
-        drawer.querySelector("form")?.addEventListener("submit", (event) => {
-          event.preventDefault();
-          setOpen(false);
         });
       })();
     </script>

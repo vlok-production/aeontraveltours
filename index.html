@@ -366,25 +366,42 @@
             <span class="material-symbols-outlined">close</span>
           </button>
         </div>
-        <form class="space-y-4">
+        <form
+          action="https://api.web3forms.com/submit"
+          class="space-y-4"
+          method="POST"
+        >
+          <input
+            name="access_key"
+            type="hidden"
+            value="cc1405ee-425d-4b21-a4b7-c76cadc9d568"
+          />
           <input
             class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            name="name"
             placeholder="Your name"
+            required
             type="text"
           />
           <input
             class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            name="email"
             placeholder="Email address"
+            required
             type="email"
           />
           <input
             class="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            name="subject"
             placeholder="Trip interest"
+            required
             type="text"
           />
           <textarea
             class="h-28 w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500"
+            name="message"
             placeholder="Tell us what you need"
+            required
           ></textarea>
           <button
             class="w-full rounded-2xl bg-teal-900 px-4 py-3 font-headline text-sm font-bold text-white"
@@ -1095,10 +1112,6 @@
         openButton.addEventListener("click", () => setOpen(true));
         closeButtons.forEach((button) => {
           button.addEventListener("click", () => setOpen(false));
-        });
-        drawer.querySelector("form")?.addEventListener("submit", (event) => {
-          event.preventDefault();
-          setOpen(false);
         });
       })();
     </script>
