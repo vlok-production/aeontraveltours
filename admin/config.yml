@@ -1,7 +1,7 @@
 # Update the repo value below before connecting Decap CMS to GitHub.
 backend:
   name: github
-  repo: your-github-username/your-repo-name
+  repo: vlok-production/aeontraveltours
   branch: main
 
 media_folder: "assets/uploads"
