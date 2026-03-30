@@ -5,8 +5,450 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    const { createClass, h } = window;
+
+    const formatPrice = (value) => {
+      const number = Number(value);
+      if (Number.isNaN(number) || number <= 0) return "";
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0,
+      }).format(number);
+    };
+
+    const packagePreviewStyle = `
+      body {
+        margin: 0;
+        background: #f5f1eb;
+        font-family: "Manrope", sans-serif;
+        color: #1a1c1c;
+      }
+      .aeon-preview {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(103, 186, 253, 0.16), transparent 28%),
+          linear-gradient(180deg, #f8f6f2 0%, #f3efe8 100%);
+        padding: 24px;
+      }
+      .aeon-shell {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      .aeon-hero {
+        position: relative;
+        min-height: 300px;
+        border-radius: 28px;
+        overflow: hidden;
+        background: #0f3f39;
+        box-shadow: 0 24px 70px rgba(0, 81, 71, 0.16);
+      }
+      .aeon-hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .aeon-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(110deg, rgba(0, 81, 71, 0.84), rgba(0, 81, 71, 0.28) 58%, rgba(0, 0, 0, 0.14));
+      }
+      .aeon-hero-copy {
+        position: relative;
+        z-index: 1;
+        padding: 34px;
+        max-width: 640px;
+        color: #fff;
+      }
+      .aeon-eyebrow {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(149, 232, 216, 0.16);
+        color: #c9fff2;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .aeon-title {
+        margin: 0 0 10px;
+        font: 800 44px/1.05 "Plus Jakarta Sans", sans-serif;
+        letter-spacing: -0.04em;
+      }
+      .aeon-subtitle {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.84);
+      }
+      .aeon-grid {
+        display: grid;
+        grid-template-columns: 1.35fr 0.9fr;
+        gap: 24px;
+        margin-top: 24px;
+      }
+      .aeon-panel,
+      .aeon-card {
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(0, 81, 71, 0.08);
+        border-radius: 24px;
+        box-shadow: 0 18px 40px rgba(0, 81, 71, 0.08);
+        backdrop-filter: blur(14px);
+      }
+      .aeon-panel {
+        padding: 26px;
+      }
+      .aeon-section-title {
+        margin: 0 0 16px;
+        color: #005147;
+        font: 800 24px/1.15 "Plus Jakarta Sans", sans-serif;
+        letter-spacing: -0.03em;
+      }
+      .aeon-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .aeon-meta-item {
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: #f2f7f5;
+      }
+      .aeon-meta-label {
+        margin-bottom: 6px;
+        color: #6e7976;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .aeon-meta-value {
+        color: #0e302c;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .aeon-price-row {
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+      .aeon-price {
+        color: #914d00;
+        font: 800 34px/1 "Plus Jakarta Sans", sans-serif;
+      }
+      .aeon-price-original {
+        color: #8b908d;
+        font-size: 14px;
+        text-decoration: line-through;
+      }
+      .aeon-rating {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 14px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #fff8ec;
+        color: #6e3900;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .aeon-copy {
+        color: #3e4946;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+      .aeon-highlight-list,
+      .aeon-itinerary-list {
+        display: grid;
+        gap: 14px;
+      }
+      .aeon-highlight,
+      .aeon-itinerary {
+        padding: 18px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid rgba(0, 81, 71, 0.08);
+      }
+      .aeon-highlight-title,
+      .aeon-itinerary-title {
+        margin: 0 0 8px;
+        color: #0e302c;
+        font: 800 18px/1.2 "Plus Jakarta Sans", sans-serif;
+      }
+      .aeon-highlight-text,
+      .aeon-itinerary-text {
+        margin: 0;
+        color: #4d5a56;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .aeon-details {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: #5e6965;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      .aeon-side-stack {
+        display: grid;
+        gap: 24px;
+      }
+      .aeon-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .aeon-gallery img,
+      .aeon-card-image {
+        width: 100%;
+        border-radius: 18px;
+        object-fit: cover;
+        background: #dbe7e3;
+      }
+      .aeon-gallery img {
+        aspect-ratio: 4 / 3;
+      }
+      .aeon-card {
+        overflow: hidden;
+      }
+      .aeon-card-image {
+        display: block;
+        aspect-ratio: 4 / 3;
+      }
+      .aeon-card-copy {
+        padding: 20px;
+      }
+      .aeon-badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: #eaf7f2;
+        color: #005147;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .aeon-card-title {
+        margin: 0 0 8px;
+        color: #0e302c;
+        font: 800 22px/1.15 "Plus Jakarta Sans", sans-serif;
+      }
+      .aeon-card-text {
+        margin: 0 0 16px;
+        color: #56615d;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .aeon-chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .aeon-chip {
+        padding: 10px 12px;
+        border-radius: 999px;
+        background: #f4f3f2;
+        color: #26413d;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .aeon-empty {
+        color: #64706c;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      @media (max-width: 900px) {
+        .aeon-grid {
+          grid-template-columns: 1fr;
+        }
+        .aeon-title {
+          font-size: 34px;
+        }
+      }
+    `;
+
+    CMS.registerPreviewStyle(
+      "data:text/css;charset=utf-8," + encodeURIComponent(packagePreviewStyle)
+    );
+
+    const PackagePreview = createClass({
+      render() {
+        const entry = this.props.entry;
+        const getAsset = this.props.getAsset;
+        const data = entry && entry.get ? entry.get("data") : null;
+
+        const title = data?.get("title") || "Untitled Package";
+        const subtitle = data?.get("subtitle") || "Add a subtitle to describe the package mood and route.";
+        const category = data?.get("category") || "Tour Package";
+        const destination = data?.get("destination") || "Destination";
+        const activityType = data?.get("activity_type") || "Activity";
+        const budgetRange = data?.get("budget_range") || "Budget";
+        const durationDays = data?.get("duration_days") || "0";
+        const groupSize = data?.get("group_size") || "Tailor Made";
+        const travelersLabel = data?.get("travelers_label") || "Travelers";
+        const overview = data?.get("overview") || "Add an overview to see how the package story will feel in the preview.";
+        const cardDescription = data?.get("card_description") || "Add a short card description to improve scanability.";
+        const rating = data?.get("rating");
+        const priceFrom = formatPrice(data?.get("price_from"));
+        const priceOriginal = formatPrice(data?.get("price_original"));
+        const heroImage = data?.get("hero_image");
+        const cardImage = data?.get("card_image");
+        const heroSrc = heroImage ? getAsset(heroImage) || heroImage : "";
+        const cardSrc = cardImage ? getAsset(cardImage) || cardImage : "";
+
+        const highlights = data?.get("highlights");
+        const itinerary = data?.get("itinerary");
+        const gallery = data?.get("gallery");
+
+        const highlightNodes = highlights && highlights.size
+          ? highlights.slice(0, 4).map((item, index) =>
+              h("div", { className: "aeon-highlight", key: `h-${index}` }, [
+                h("h4", { className: "aeon-highlight-title" }, item.get("title") || "Highlight"),
+                h("p", { className: "aeon-highlight-text" }, item.get("description") || ""),
+              ])
+            ).toArray()
+          : [h("p", { className: "aeon-empty", key: "h-empty" }, "Add highlights to preview the selling points section.")];
+
+        const itineraryNodes = itinerary && itinerary.size
+          ? itinerary.slice(0, 3).map((item, index) => {
+              const details = item.get("details");
+              const detailItems = details && details.size
+                ? h(
+                    "ul",
+                    { className: "aeon-details" },
+                    details.slice(0, 3).map((detail, detailIndex) =>
+                      h("li", { key: `d-${index}-${detailIndex}` }, detail)
+                    ).toArray()
+                  )
+                : null;
+
+              return h("div", { className: "aeon-itinerary", key: `i-${index}` }, [
+                h("h4", { className: "aeon-itinerary-title" }, item.get("title") || "Day plan"),
+                h("p", { className: "aeon-itinerary-text" }, item.get("description") || ""),
+                detailItems,
+              ]);
+            }).toArray()
+          : [h("p", { className: "aeon-empty", key: "i-empty" }, "Add itinerary days to preview the detail-page structure.")];
+
+        const galleryNodes = gallery && gallery.size
+          ? gallery.slice(0, 4).map((item, index) => {
+              const src = item.get("src");
+              const resolved = src ? getAsset(src) || src : "";
+              return h("img", {
+                key: `g-${index}`,
+                src: resolved,
+                alt: item.get("alt") || `Gallery image ${index + 1}`,
+              });
+            }).toArray()
+          : [
+              h("div", { className: "aeon-empty", key: "g-empty" }, "Add gallery images to preview the visual gallery block.")
+            ];
+
+        return h("div", { className: "aeon-preview" }, [
+          h("div", { className: "aeon-shell", key: "shell" }, [
+            h("section", { className: "aeon-hero", key: "hero" }, [
+              heroSrc ? h("img", { src: heroSrc, alt: data?.get("hero_alt") || title, key: "hero-image" }) : null,
+              h("div", { className: "aeon-hero-copy", key: "hero-copy" }, [
+                h("span", { className: "aeon-eyebrow" }, category),
+                h("h1", { className: "aeon-title" }, title),
+                h("p", { className: "aeon-subtitle" }, subtitle),
+              ]),
+            ]),
+            h("div", { className: "aeon-grid", key: "grid" }, [
+              h("div", { className: "aeon-panel", key: "main" }, [
+                h("h2", { className: "aeon-section-title" }, "Package Overview"),
+                h("div", { className: "aeon-meta" }, [
+                  h("div", { className: "aeon-meta-item", key: "destination" }, [
+                    h("div", { className: "aeon-meta-label" }, "Destination"),
+                    h("div", { className: "aeon-meta-value" }, destination),
+                  ]),
+                  h("div", { className: "aeon-meta-item", key: "activity" }, [
+                    h("div", { className: "aeon-meta-label" }, "Activity"),
+                    h("div", { className: "aeon-meta-value" }, activityType),
+                  ]),
+                  h("div", { className: "aeon-meta-item", key: "budget" }, [
+                    h("div", { className: "aeon-meta-label" }, "Budget"),
+                    h("div", { className: "aeon-meta-value" }, budgetRange),
+                  ]),
+                  h("div", { className: "aeon-meta-item", key: "duration" }, [
+                    h("div", { className: "aeon-meta-label" }, "Duration"),
+                    h("div", { className: "aeon-meta-value" }, `${durationDays} days`),
+                  ]),
+                  h("div", { className: "aeon-meta-item", key: "group-size" }, [
+                    h("div", { className: "aeon-meta-label" }, "Group Size"),
+                    h("div", { className: "aeon-meta-value" }, groupSize),
+                  ]),
+                  h("div", { className: "aeon-meta-item", key: "travellers" }, [
+                    h("div", { className: "aeon-meta-label" }, "Travellers"),
+                    h("div", { className: "aeon-meta-value" }, travelersLabel),
+                  ]),
+                ]),
+                h("div", { style: { marginTop: "22px" } }, [
+                  h("div", { className: "aeon-price-row" }, [
+                    priceFrom ? h("div", { className: "aeon-price", key: "price-from" }, priceFrom) : null,
+                    priceOriginal ? h("div", { className: "aeon-price-original", key: "price-original" }, priceOriginal) : null,
+                  ]),
+                  rating !== undefined && rating !== null && rating !== ""
+                    ? h("div", { className: "aeon-rating" }, `Rating ${rating} / 5`)
+                    : null,
+                ]),
+                h("p", { className: "aeon-copy", style: { marginTop: "22px" } }, overview),
+                h("h3", { className: "aeon-section-title", style: { marginTop: "28px" } }, "Highlights"),
+                h("div", { className: "aeon-highlight-list" }, highlightNodes),
+                h("h3", { className: "aeon-section-title", style: { marginTop: "28px" } }, "Sample Itinerary"),
+                h("div", { className: "aeon-itinerary-list" }, itineraryNodes),
+              ]),
+              h("div", { className: "aeon-side-stack", key: "side" }, [
+                h("article", { className: "aeon-card", key: "card" }, [
+                  cardSrc
+                    ? h("img", {
+                        className: "aeon-card-image",
+                        src: cardSrc,
+                        alt: data?.get("card_alt") || title,
+                      })
+                    : null,
+                  h("div", { className: "aeon-card-copy" }, [
+                    h("span", { className: "aeon-badge" }, category),
+                    h("h3", { className: "aeon-card-title" }, title),
+                    h("p", { className: "aeon-card-text" }, cardDescription),
+                    h("div", { className: "aeon-chip-row" }, [
+                      h("span", { className: "aeon-chip", key: "chip-duration" }, `${durationDays} Days`),
+                      h("span", { className: "aeon-chip", key: "chip-budget" }, budgetRange),
+                      h("span", { className: "aeon-chip", key: "chip-destination" }, destination),
+                    ]),
+                  ]),
+                ]),
+                h("div", { className: "aeon-panel", key: "gallery-panel" }, [
+                  h("h3", { className: "aeon-section-title" }, "Gallery Preview"),
+                  h("div", { className: "aeon-gallery" }, galleryNodes),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]);
+      },
+    });
+
+    CMS.registerPreviewTemplate("packages_data", PackagePreview);
+    CMS.registerPreviewTemplate("packages", PackagePreview);
+  </script>
 </body>
 </html>
