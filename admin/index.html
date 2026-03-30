@@ -294,29 +294,78 @@
         const entry = this.props.entry;
         const getAsset = this.props.getAsset;
         const data = entry && entry.get ? entry.get("data") : null;
+        const packagesList = data?.get("packages");
+        const packageData =
+          packagesList && packagesList.size ? packagesList.get(0) : data;
 
-        const title = data?.get("title") || "Untitled Package";
-        const subtitle = data?.get("subtitle") || "Add a subtitle to describe the package mood and route.";
-        const category = data?.get("category") || "Tour Package";
-        const destination = data?.get("destination") || "Destination";
-        const activityType = data?.get("activity_type") || "Activity";
-        const budgetRange = data?.get("budget_range") || "Budget";
-        const durationDays = data?.get("duration_days") || "0";
-        const groupSize = data?.get("group_size") || "Tailor Made";
-        const travelersLabel = data?.get("travelers_label") || "Travelers";
-        const overview = data?.get("overview") || "Add an overview to see how the package story will feel in the preview.";
-        const cardDescription = data?.get("card_description") || "Add a short card description to improve scanability.";
-        const rating = data?.get("rating");
-        const priceFrom = formatPrice(data?.get("price_from"));
-        const priceOriginal = formatPrice(data?.get("price_original"));
-        const heroImage = data?.get("hero_image");
-        const cardImage = data?.get("card_image");
+        const title = packageData?.get("title") || "Tour Packages";
+        const subtitle =
+          packageData?.get("subtitle") ||
+          "Live preview for the packages collection.";
+        const category = packageData?.get("category") || "Tour Package";
+        const destination = packageData?.get("destination") || "Destination";
+        const activityType = packageData?.get("activity_type") || "Activity";
+        const budgetRange = packageData?.get("budget_range") || "Budget";
+        const durationDays = packageData?.get("duration_days") || "0";
+        const groupSize = packageData?.get("group_size") || "Tailor Made";
+        const travelersLabel = packageData?.get("travelers_label") || "Travelers";
+        const overview =
+          packageData?.get("overview") ||
+          "Add or edit packages in the left panel to preview how they feel in the CMS.";
+        const cardDescription =
+          packageData?.get("card_description") ||
+          "This preview now reads from the packages list and shows real content.";
+        const rating = packageData?.get("rating");
+        const priceFrom = formatPrice(packageData?.get("price_from"));
+        const priceOriginal = formatPrice(packageData?.get("price_original"));
+        const heroImage = packageData?.get("hero_image");
+        const cardImage = packageData?.get("card_image");
         const heroSrc = heroImage ? getAsset(heroImage) || heroImage : "";
         const cardSrc = cardImage ? getAsset(cardImage) || cardImage : "";
 
-        const highlights = data?.get("highlights");
-        const itinerary = data?.get("itinerary");
-        const gallery = data?.get("gallery");
+        const highlights = packageData?.get("highlights");
+        const itinerary = packageData?.get("itinerary");
+        const gallery = packageData?.get("gallery");
+
+        const collectionCards =
+          packagesList && packagesList.size
+            ? packagesList.slice(0, 6).map((item, index) => {
+                const image = item.get("card_image");
+                const imageSrc = image ? getAsset(image) || image : "";
+                const itemTitle = item.get("title") || "Untitled Package";
+                const itemDestination = item.get("destination") || "Destination";
+                const itemBudget = item.get("budget_range") || "Budget";
+                const itemDuration = item.get("duration_days") || "0";
+                const itemPrice = formatPrice(item.get("price_from"));
+
+                return h("article", { className: "aeon-card", key: `collection-${index}` }, [
+                  imageSrc
+                    ? h("img", {
+                        className: "aeon-card-image",
+                        src: imageSrc,
+                        alt: item.get("card_alt") || itemTitle,
+                      })
+                    : null,
+                  h("div", { className: "aeon-card-copy" }, [
+                    h("span", { className: "aeon-badge" }, item.get("category") || "Tour Package"),
+                    h("h3", { className: "aeon-card-title" }, itemTitle),
+                    h(
+                      "p",
+                      { className: "aeon-card-text" },
+                      item.get("card_description") || "Package summary"
+                    ),
+                    h("div", { className: "aeon-chip-row" }, [
+                      h("span", { className: "aeon-chip", key: `dur-${index}` }, `${itemDuration} Days`),
+                      h("span", { className: "aeon-chip", key: `dest-${index}` }, itemDestination),
+                      h("span", { className: "aeon-chip", key: `budget-${index}` }, itemBudget),
+                      itemPrice
+                        ? h("span", { className: "aeon-chip", key: `price-${index}` }, itemPrice)
+                        : null,
+                    ]),
+                  ]),
+                ]);
+              }).toArray()
+            : null;
 
         const highlightNodes = highlights && highlights.size
           ? highlights.slice(0, 4).map((item, index) =>
@@ -365,13 +414,29 @@
         return h("div", { className: "aeon-preview" }, [
           h("div", { className: "aeon-shell", key: "shell" }, [
             h("section", { className: "aeon-hero", key: "hero" }, [
-              heroSrc ? h("img", { src: heroSrc, alt: data?.get("hero_alt") || title, key: "hero-image" }) : null,
+              heroSrc ? h("img", { src: heroSrc, alt: packageData?.get("hero_alt") || title, key: "hero-image" }) : null,
               h("div", { className: "aeon-hero-copy", key: "hero-copy" }, [
                 h("span", { className: "aeon-eyebrow" }, category),
                 h("h1", { className: "aeon-title" }, title),
                 h("p", { className: "aeon-subtitle" }, subtitle),
               ]),
             ]),
+            collectionCards
+              ? h("div", { className: "aeon-panel", key: "collection-panel", style: { marginTop: "24px" } }, [
+                  h("h2", { className: "aeon-section-title" }, "Collection Preview"),
+                  h(
+                    "div",
+                    {
+                      style: {
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                        gap: "18px",
+                      },
+                    },
+                    collectionCards
+                  ),
+                ])
+              : null,
             h("div", { className: "aeon-grid", key: "grid" }, [
               h("div", { className: "aeon-panel", key: "main" }, [
                 h("h2", { className: "aeon-section-title" }, "Package Overview"),
@@ -422,7 +487,7 @@
                     ? h("img", {
                         className: "aeon-card-image",
                         src: cardSrc,
-                        alt: data?.get("card_alt") || title,
+                        alt: packageData?.get("card_alt") || title,
                       })
                     : null,
                   h("div", { className: "aeon-card-copy" }, [
