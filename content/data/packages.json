@@ -55,16 +55,16 @@
       "destination": "Central Highlands",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
+          "src": "/assets/uploads/pexels-batagov-29644512.jpg",
           "alt": "Scenic train moving through Sri Lanka's tea country"
         },
         {
-          "src": "https://www.wanderlustchloe.com/wp-content/uploads/2024/09/things-to-do-in-ella-sri-lanka.jpg",
-          "alt": "Ella"
+          "src": "/assets/uploads/pexels-batagov-29644512.jpg",
+          "alt": "Bridge"
         },
         {
-          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXzuWXIBYdjcDfdJ1ZEohKUOFF8ftHyxHHQ&s",
-          "alt": "Bridge"
+          "src": "/assets/uploads/pexels-senuscape-728360-1658967.jpg",
+          "alt": "Ella"
         }
       ],
       "related_slugs": [
