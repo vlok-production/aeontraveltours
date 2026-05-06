@@ -566,27 +566,6 @@
               >
             </div>
           </div>
-          <div class="flex-1 min-w-[180px]">
-            <label
-              class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 font-label"
-              >Budget Range</label
-            >
-            <div class="relative">
-              <select
-                class="w-full bg-surface-container-low border-none rounded-lg py-3 px-4 text-on-surface focus:ring-2 focus:ring-primary appearance-none"
-                id="filter-budget"
-              >
-                <option>All Budgets</option>
-                <option>Budget Friendly</option>
-                <option>Mid-Range</option>
-                <option>Luxury Experience</option>
-              </select>
-              <span
-                class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-outline"
-                >payments</span
-              >
-            </div>
-          </div>
           <button
             class="bg-secondary text-on-secondary px-8 py-3.5 rounded-full font-headline font-bold flex items-center gap-2 hover:scale-105 transition-transform"
             id="apply-filters"
@@ -902,7 +881,6 @@
         const destination = document.getElementById("filter-destination");
         const duration = document.getElementById("filter-duration");
         const activity = document.getElementById("filter-activity");
-        const budget = document.getElementById("filter-budget");
         const apply = document.getElementById("apply-filters");
         const reset = document.getElementById("reset-filters");
         const loadMore = document.getElementById("load-more-packages");
@@ -911,13 +889,6 @@
         const loadStep = 3;
         let visibleCount = initialVisibleCount;
         let keyword = "";
-
-        const formatPrice = (value) =>
-          new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            maximumFractionDigits: 0,
-          }).format(value);
 
         const durationMatches = (pkg, value) => {
           if (value === "Any Duration") return true;
@@ -949,9 +920,6 @@
         };
 
         const renderCard = (pkg) => {
-          const original = pkg.price_original
-            ? `<span class="block text-xs font-bold text-outline font-label line-through">${formatPrice(pkg.price_original)}</span>`
-            : "";
           return `
 <a class="group bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300" href="tripdetail.html?slug=${encodeURIComponent(pkg.slug)}">
   <div class="relative aspect-[4/3] overflow-hidden">
@@ -959,12 +927,8 @@
     <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-xs font-bold text-primary tracking-wider uppercase font-headline">${pkg.category}</div>
   </div>
   <div class="p-6 flex flex-col flex-grow">
-    <div class="flex justify-between items-start mb-3 gap-4">
+    <div class="mb-3">
       <h3 class="text-xl font-extrabold font-headline leading-tight group-hover:text-primary transition-colors">${pkg.title}</h3>
-      <div class="text-right">
-        ${original}
-        <span class="block text-lg font-extrabold text-tertiary font-headline leading-none">${formatPrice(pkg.price_from)}</span>
-      </div>
     </div>
     <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">${pkg.card_description}</p>
     <div class="flex items-center justify-between mt-auto pt-6 border-t border-surface-variant/50">
@@ -989,9 +953,6 @@
           }
           if (activity.value !== "All Activities") {
             activeFilters.push(activity.value);
-          }
-          if (budget.value !== "All Budgets") {
-            activeFilters.push(budget.value);
           }
           if (keyword.trim()) {
             activeFilters.push(`"${keyword.trim()}"`);
@@ -1031,13 +992,9 @@
             const activityMatch =
               activity.value === "All Activities" ||
               pkg.activity_type === activity.value;
-            const budgetMatch =
-              budget.value === "All Budgets" ||
-              pkg.budget_range === budget.value;
             return (
               destinationMatch &&
               activityMatch &&
-              budgetMatch &&
               durationMatches(pkg, duration.value) &&
               keywordMatches(pkg, keyword)
             );
@@ -1056,7 +1013,6 @@
           destination.value = "All Destinations";
           duration.value = "Any Duration";
           activity.value = "All Activities";
-          budget.value = "All Budgets";
           keyword = "";
           window.history.replaceState({}, "", "trips.html");
           applyFilters(packages);
@@ -1068,7 +1024,6 @@
             const packages = Array.isArray(data.packages) ? data.packages : [];
             const presetDestination = params.get("destination");
             const presetActivity = params.get("activity");
-            const presetBudget = params.get("budget");
             const presetDuration = params.get("duration");
             const presetKeyword = params.get("q");
 
@@ -1089,14 +1044,6 @@
               activity.value = presetActivity;
             }
             if (
-              presetBudget &&
-              [...budget.options].some(
-                (option) => option.value === presetBudget,
-              )
-            ) {
-              budget.value = presetBudget;
-            }
-            if (
               presetDuration &&
               [...duration.options].some(
                 (option) => option.value === presetDuration,
@@ -1111,7 +1058,7 @@
             applyFilters(packages);
             apply.addEventListener("click", () => applyFilters(packages));
             reset?.addEventListener("click", () => resetFilters(packages));
-            [destination, duration, activity, budget].forEach((input) => {
+            [destination, duration, activity].forEach((input) => {
               input.addEventListener("change", () => applyFilters(packages));
             });
             loadMore.addEventListener("click", () => {

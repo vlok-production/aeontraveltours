@@ -485,10 +485,6 @@
                 <span class="material-symbols-outlined">group</span
                 ><span id="detail-travelers"></span>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined">payments</span
-                ><span id="detail-price-label"></span>
-              </div>
             </div>
           </div>
         </div>
@@ -563,19 +559,6 @@
             <div
               class="sticky top-28 rounded-[2rem] border border-outline-variant/20 bg-surface-container-lowest p-8 shadow-xl shadow-on-surface/5"
             >
-              <div class="mb-8">
-                <span
-                  class="text-sm uppercase tracking-widest text-on-surface-variant"
-                  >Pricing starts at</span
-                >
-                <div class="mt-2 flex items-baseline gap-2">
-                  <span
-                    class="font-headline text-4xl font-extrabold text-primary"
-                    id="sidebar-price"
-                  ></span
-                  ><span class="text-on-surface-variant">/ traveler</span>
-                </div>
-              </div>
               <div class="space-y-6">
                 <div>
                   <label class="mb-2 block text-sm font-bold text-on-surface"
@@ -611,14 +594,6 @@
                     >Plan This Journey</a
                   >
                 </div>
-              </div>
-              <div
-                class="mt-8 border-t border-outline-variant/30 pt-8 text-center"
-              >
-                <p class="px-4 text-xs text-on-surface-variant">
-                  Final pricing depends on accommodation availability and
-                  seasonal surcharges.
-                </p>
               </div>
             </div>
           </aside>
@@ -865,24 +840,15 @@
           hero: document.getElementById("detail-hero-image"),
           duration: document.getElementById("detail-duration"),
           travelers: document.getElementById("detail-travelers"),
-          priceLabel: document.getElementById("detail-price-label"),
           overview: document.getElementById("detail-overview"),
           highlights: document.getElementById("detail-highlights"),
           itinerary: document.getElementById("detail-itinerary"),
           includes: document.getElementById("detail-includes"),
           excludes: document.getElementById("detail-excludes"),
           gallery: document.getElementById("detail-gallery"),
-          sidebarPrice: document.getElementById("sidebar-price"),
           sidebarTravelers: document.getElementById("sidebar-travelers"),
           related: document.getElementById("detail-related"),
         };
-
-        const price = (value) =>
-          new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            maximumFractionDigits: 0,
-          }).format(value);
 
         const esc = (value) =>
           String(value ?? "").replace(
@@ -986,8 +952,7 @@ ${item.details
   <div class="p-6">
     <h3 class="font-headline text-xl font-bold text-on-surface">${esc(pkg.title)}</h3>
     <p class="mt-2 text-sm text-on-surface-variant">${esc(pkg.card_description)}</p>
-    <div class="mt-5 flex items-center justify-between">
-      <span class="font-bold text-secondary">From ${price(pkg.price_from)}</span>
+    <div class="mt-5 flex justify-end">
       <span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
     </div>
   </div>
@@ -1020,9 +985,7 @@ ${item.details
             el.subtitle.textContent = selected.subtitle;
             el.duration.textContent = `${selected.duration_days} Days`;
             el.travelers.textContent = selected.travelers_label;
-            el.priceLabel.textContent = `From ${price(selected.price_from)} per person`;
             el.overview.textContent = selected.overview;
-            el.sidebarPrice.textContent = price(selected.price_from);
             el.sidebarTravelers.textContent = selected.travelers_label;
             el.highlights.innerHTML = renderHighlights(
               selected.highlights || [],
@@ -1056,10 +1019,8 @@ ${item.details
             el.rating.textContent = "--";
             el.duration.textContent = "--";
             el.travelers.textContent = "--";
-            el.priceLabel.textContent = "--";
             el.overview.textContent =
               "This page depends on content/data/packages.json. Check that the JSON file is available through your local server.";
-            el.sidebarPrice.textContent = "--";
             el.sidebarTravelers.textContent = "--";
             el.related.innerHTML = "";
           });
