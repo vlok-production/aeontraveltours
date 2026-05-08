@@ -55,16 +55,16 @@
       "destination": "Central Highlands",
       "gallery": [
         {
-          "src": "/assets/uploads/pexels-batagov-29644512.jpg",
-          "alt": "Scenic train moving through Sri Lanka's tea country"
+          "src": "assets/images/nuwaraeliya 1.jpg",
+          "alt": "Tea-country highlands around Nuwara Eliya"
         },
         {
-          "src": "/assets/uploads/pexels-senuscape-728360-1658967.jpg",
-          "alt": "Ella"
+          "src": "assets/images/kandy 1.jpg",
+          "alt": "Hill-country gateway through Kandy"
         },
         {
-          "src": "/assets/uploads/pexels-dunanjaya-amith-105200682-9505333.jpg",
-          "alt": "Nature of Sri Lanka"
+          "src": "assets/images/udawalawa 1.jpg",
+          "alt": "Udawalawe wildlife stop on the final day"
         }
       ],
       "related_slugs": [
@@ -177,12 +177,16 @@
       "destination": "Central Highlands",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
-          "alt": "Tea plantation slopes in Sri Lanka"
+          "src": "assets/images/kandy 2.jpg",
+          "alt": "Kandy city and cultural highland setting"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDIm6utbYut33M16IYrO_L5PiN_5L_uVr14x6ezE6vx1Abcpu6ChyvF93-a5UCW0C1PiUZYzdxEhJabMxIH2D9Yae-xBrEtV9bfW2FUHDhmzPv6JoxHWkbQIbaD6LalMfBoxtQZx2Rfs_5W1wp8La0mFs3M1-pkjCplz2IHSoMxweXC2KbiE6stacCxdLx9QguF0LRDs4PDHcsL7gKc-6SMxxPE91lXLP66GbaywkAfyO65LXnm0hl19kEwuR2OyNt2n8fTsGRBeOA",
-          "alt": "Train crossing Nine Arch Bridge in Ella"
+          "src": "assets/images/nuwaraeliya 2.jpg",
+          "alt": "Tea-estate slopes near Nuwara Eliya"
+        },
+        {
+          "src": "assets/images/nuwaraeliya 3.jpg",
+          "alt": "Cool-climate highland scenery near Horton Plains"
         }
       ],
       "related_slugs": [
@@ -285,12 +289,16 @@
       "destination": "Central Highlands",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Misty tea country and layered mountain ridges"
+          "src": "assets/images/kandy 3.jpg",
+          "alt": "Kandy's lakeside hill-country atmosphere"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDIm6utbYut33M16IYrO_L5PiN_5L_uVr14x6ezE6vx1Abcpu6ChyvF93-a5UCW0C1PiUZYzdxEhJabMxIH2D9Yae-xBrEtV9bfW2FUHDhmzPv6JoxHWkbQIbaD6LalMfBoxtQZx2Rfs_5W1wp8La0mFs3M1-pkjCplz2IHSoMxweXC2KbiE6stacCxdLx9QguF0LRDs4PDHcsL7gKc-6SMxxPE91lXLP66GbaywkAfyO65LXnm0hl19kEwuR2OyNt2n8fTsGRBeOA",
-          "alt": "Blue train crossing Nine Arch Bridge in Ella"
+          "src": "assets/images/nuwaraeliya 4.jpg",
+          "alt": "Rolling tea hills across Sri Lanka's central highlands"
+        },
+        {
+          "src": "assets/images/nuwaraeliya 5.jpg",
+          "alt": "Highland viewpoints along the Ella route"
         }
       ],
       "related_slugs": [
@@ -428,22 +436,26 @@
       "destination": "Central Highlands",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Misty tea plantations in Sri Lanka's central highlands"
+          "src": "assets/images/kandy 4.jpg",
+          "alt": "Kandy stop on the longer hill-country circuit"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDIm6utbYut33M16IYrO_L5PiN_5L_uVr14x6ezE6vx1Abcpu6ChyvF93-a5UCW0C1PiUZYzdxEhJabMxIH2D9Yae-xBrEtV9bfW2FUHDhmzPv6JoxHWkbQIbaD6LalMfBoxtQZx2Rfs_5W1wp8La0mFs3M1-pkjCplz2IHSoMxweXC2KbiE6stacCxdLx9QguF0LRDs4PDHcsL7gKc-6SMxxPE91lXLP66GbaywkAfyO65LXnm0hl19kEwuR2OyNt2n8fTsGRBeOA",
-          "alt": "Scenic train crossing Nine Arch Bridge"
+          "src": "assets/images/nuwaraeliya 6.jpg",
+          "alt": "Tea-country scenery through the central highlands"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvdmL1NKDwT1byi78gBfokfJy6ckAlNOZ2ib56jktL_EZKcvullljmGJPSqGyFkgUGrQ7SYjdacBfdGOsE0UXTC7fHe6LPwFkBaap02TChO0lwsqokswLBd4FPowXaJnhFAi76gn_UcbSP7eb9o4yvEYhYfLuNg_cqxKAVYQjwbblhCsGCkDtIsi602ds6P76UkbBZ4KOVyiXlwL6V-zesAP11gZR3TMCu8ReQNXDO5qGAJ5MoJeQGuL5cINqnR3mxrzbKjhaYNLE",
-          "alt": "Leopard habitat in Yala National Park"
+          "src": "assets/images/yala 1.jpg",
+          "alt": "Yala safari segment on the extended route"
+        },
+        {
+          "src": "assets/images/galle 2.jpg",
+          "alt": "Southern coast finale in historic Galle"
         }
       ],
       "related_slugs": [
         "7-days-hill-country-trains-trails-mist",
-        "a-12-day-island-adventure-awaits",
-        "10-Days-Sri-Lanka-Dream-Route"
+        "5-days-hill-country-trains-trails-mist",
+        "10-days-sri-lanka-wildlife-safari-nature-tour"
       ],
       "hero_image": "https://www.stokedtotravel.com/wp-content/uploads/2019/05/IMG_5182.jpg",
       "subtitle": "Immersive Highlands, Safari & South Coast",
@@ -533,12 +545,16 @@
       "destination": "Wild Frontier",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvdmL1NKDwT1byi78gBfokfJy6ckAlNOZ2ib56jktL_EZKcvullljmGJPSqGyFkgUGrQ7SYjdacBfdGOsE0UXTC7fHe6LPwFkBaap02TChO0lwsqokswLBd4FPowXaJnhFAi76gn_UcbSP7eb9o4yvEYhYfLuNg_cqxKAVYQjwbblhCsGCkDtIsi602ds6P76UkbBZ4KOVyiXlwL6V-zesAP11gZR3TMCu8ReQNXDO5qGAJ5MoJeQGuL5cINqnR3mxrzbKjhaYNLE",
-          "alt": "Wildlife safari landscape in Yala"
+          "src": "assets/images/yala 1.jpg",
+          "alt": "Safari landscape in Yala National Park"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvP5pIV5o-hsPyXNwxhSlRXa18Er6pl6LAFzPLYvhIgJtez2Lww3zHvnK6nQlJR-2s-0em3FWYccb1k4y0LYyCCaOukqnzPl0UO9-MeM5frWeYg-0aAVXQDo_kr7uTay4OMl17qWf1r9kZdqmXxS2_wpILRMFHOkg6Us9XWKRL3tqLYn76jl3oCh3mJDe6xEcTndKzjjK9ypGMVPh61CIO1i6wbPZQ7HylVeswntYriqfI1_9HTeYdfkcKO0ZUqxfPLSjNugtIfVQ",
+          "src": "assets/images/udawalawa 1.jpg",
           "alt": "Elephants in Udawalawe National Park"
+        },
+        {
+          "src": "assets/images/yala 2.jpg",
+          "alt": "Dry-zone wildlife terrain in southern Sri Lanka"
         }
       ],
       "related_slugs": [
@@ -652,12 +668,16 @@
       "destination": "Wild Frontier",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvdmL1NKDwT1byi78gBfokfJy6ckAlNOZ2ib56jktL_EZKcvullljmGJPSqGyFkgUGrQ7SYjdacBfdGOsE0UXTC7fHe6LPwFkBaap02TChO0lwsqokswLBd4FPowXaJnhFAi76gn_UcbSP7eb9o4yvEYhYfLuNg_cqxKAVYQjwbblhCsGCkDtIsi602ds6P76UkbBZ4KOVyiXlwL6V-zesAP11gZR3TMCu8ReQNXDO5qGAJ5MoJeQGuL5cINqnR3mxrzbKjhaYNLE",
-          "alt": "Leopard habitat and safari jeep country in Sri Lanka"
+          "src": "assets/images/yala 2.jpg",
+          "alt": "Leopard country and safari landscapes in Yala"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvP5pIV5o-hsPyXNwxhSlRXa18Er6pl6LAFzPLYvhIgJtez2Lww3zHvnK6nQlJR-2s-0em3FWYccb1k4y0LYyCCaOukqnzPl0UO9-MeM5frWeYg-0aAVXQDo_kr7uTay4OMl17qWf1r9kZdqmXxS2_wpILRMFHOkg6Us9XWKRL3tqLYn76jl3oCh3mJDe6xEcTndKzjjK9ypGMVPh61CIO1i6wbPZQ7HylVeswntYriqfI1_9HTeYdfkcKO0ZUqxfPLSjNugtIfVQ",
-          "alt": "Elephants in Udawalawe National Park"
+          "src": "assets/images/udawalawa 1.jpg",
+          "alt": "Udawalawe elephant encounters"
+        },
+        {
+          "src": "assets/images/kandy 5.jpg",
+          "alt": "Kandy stop between Sri Lanka's major safari parks"
         }
       ],
       "related_slugs": [
@@ -782,18 +802,22 @@
       "destination": "Wild Frontier",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvdmL1NKDwT1byi78gBfokfJy6ckAlNOZ2ib56jktL_EZKcvullljmGJPSqGyFkgUGrQ7SYjdacBfdGOsE0UXTC7fHe6LPwFkBaap02TChO0lwsqokswLBd4FPowXaJnhFAi76gn_UcbSP7eb9o4yvEYhYfLuNg_cqxKAVYQjwbblhCsGCkDtIsi602ds6P76UkbBZ4KOVyiXlwL6V-zesAP11gZR3TMCu8ReQNXDO5qGAJ5MoJeQGuL5cINqnR3mxrzbKjhaYNLE",
-          "alt": "Safari landscape in Yala National Park"
+          "src": "assets/images/yala 3.jpg",
+          "alt": "Yala National Park safari landscape"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvP5pIV5o-hsPyXNwxhSlRXa18Er6pl6LAFzPLYvhIgJtez2Lww3zHvnK6nQlJR-2s-0em3FWYccb1k4y0LYyCCaOukqnzPl0UO9-MeM5frWeYg-0aAVXQDo_kr7uTay4OMl17qWf1r9kZdqmXxS2_wpILRMFHOkg6Us9XWKRL3tqLYn76jl3oCh3mJDe6xEcTndKzjjK9ypGMVPh61CIO1i6wbPZQ7HylVeswntYriqfI1_9HTeYdfkcKO0ZUqxfPLSjNugtIfVQ",
+          "src": "assets/images/udawalawa 1.jpg",
           "alt": "Elephants grazing in Udawalawe"
+        },
+        {
+          "src": "assets/images/galle 3.jpg",
+          "alt": "Galle stop on the south-coast finish"
         }
       ],
       "related_slugs": [
         "5-days-wild-sri-lanka-safari-wildlife-tour",
         "10-days-sri-lanka-wildlife-safari-nature-tour",
-        "6-days-island-charm-express"
+        "3-days-wild-sri-lanka-safari-wildlife-tour"
       ],
       "hero_image": "https://photos.tpn.to/rj/hg/re/lj/1600x900.jpg",
       "subtitle": "From Sigiriya to Yala with Safari Depth",
@@ -922,18 +946,26 @@
       "destination": "Wild Frontier",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvdmL1NKDwT1byi78gBfokfJy6ckAlNOZ2ib56jktL_EZKcvullljmGJPSqGyFkgUGrQ7SYjdacBfdGOsE0UXTC7fHe6LPwFkBaap02TChO0lwsqokswLBd4FPowXaJnhFAi76gn_UcbSP7eb9o4yvEYhYfLuNg_cqxKAVYQjwbblhCsGCkDtIsi602ds6P76UkbBZ4KOVyiXlwL6V-zesAP11gZR3TMCu8ReQNXDO5qGAJ5MoJeQGuL5cINqnR3mxrzbKjhaYNLE",
-          "alt": "Leopard country in Sri Lanka's dry zone"
+          "src": "assets/images/yala 4.jpg",
+          "alt": "Dry-zone safari country in southern Sri Lanka"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvP5pIV5o-hsPyXNwxhSlRXa18Er6pl6LAFzPLYvhIgJtez2Lww3zHvnK6nQlJR-2s-0em3FWYccb1k4y0LYyCCaOukqnzPl0UO9-MeM5frWeYg-0aAVXQDo_kr7uTay4OMl17qWf1r9kZdqmXxS2_wpILRMFHOkg6Us9XWKRL3tqLYn76jl3oCh3mJDe6xEcTndKzjjK9ypGMVPh61CIO1i6wbPZQ7HylVeswntYriqfI1_9HTeYdfkcKO0ZUqxfPLSjNugtIfVQ",
+          "src": "assets/images/udawalawa 1.jpg",
           "alt": "Elephants in a Sri Lankan safari park"
+        },
+        {
+          "src": "assets/images/nuwaraeliya 7.jpg",
+          "alt": "Hill-country scenery folded into a longer wildlife route"
+        },
+        {
+          "src": "assets/images/kandy 4.jpg",
+          "alt": "Cultural inland stop between safari regions"
         }
       ],
       "related_slugs": [
         "7-days-wild-sri-lanka-safari-wildlife-tour",
-        "6-days-island-charm-express",
-        "10-Days-Sri-Lanka-Dream-Route"
+        "5-days-wild-sri-lanka-safari-wildlife-tour",
+        "3-days-wild-sri-lanka-safari-wildlife-tour"
       ],
       "hero_image": "https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/dgj7mt26g53n5bokakh0/Minneriya%20National%20Park%20Safari%20Drive%20from%20Trincomalee%2C%20Sri%20Lanka.jpg",
       "subtitle": "Wilpattu, Minneriya, Hill Country and Yala",
@@ -1023,12 +1055,16 @@
       "destination": "Authentic Local",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
-          "alt": "Tea estate experience in Sri Lanka's highlands"
+          "src": "assets/images/nuwaraeliya 2.jpg",
+          "alt": "Tea-country calm for a short wellness retreat"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Misty mountain setting for an Ayurveda retreat"
+          "src": "assets/images/kandy 1.jpg",
+          "alt": "Quiet inland setting for restorative travel"
+        },
+        {
+          "src": "assets/images/nuwaraeliya 3.jpg",
+          "alt": "Cool-climate highland atmosphere for Ayurveda stays"
         }
       ],
       "related_slugs": [
@@ -1133,12 +1169,16 @@
       "destination": "Authentic Local",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
-          "alt": "Tea-country luxury stay in Sri Lanka"
+          "src": "assets/images/kandy 2.jpg",
+          "alt": "Cultural highland setting on a wellness route"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Relaxing mountain retreat atmosphere for Ayurveda travel"
+          "src": "assets/images/nuwaraeliya 4.jpg",
+          "alt": "Relaxing mountain retreat atmosphere in Nuwara Eliya"
+        },
+        {
+          "src": "assets/images/nuwaraeliya 5.jpg",
+          "alt": "Tea-country luxury mood for an extended wellness stay"
         }
       ],
       "related_slugs": [
@@ -1253,12 +1293,16 @@
       "destination": "Authentic Local",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
-          "alt": "Tea-country luxury travel in Sri Lanka"
+          "src": "assets/images/kandy 3.jpg",
+          "alt": "Kandy heritage and calm as part of the wellness circuit"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "Calm southern coast resort for a luxury wellness stay"
+          "src": "assets/images/nuwaraeliya 6.jpg",
+          "alt": "Tea-country reset in the central highlands"
+        },
+        {
+          "src": "assets/images/mirissa 1.jpg",
+          "alt": "Soft coastal finish for a luxury wellness stay"
         }
       ],
       "related_slugs": [
@@ -1393,12 +1437,20 @@
       "destination": "Authentic Local",
       "gallery": [
         {
-          "src": "https://adaderanaenglish.s3.amazonaws.com/1720590017-Ceylon-Tea-6.jpg",
-          "alt": "Tea-country elegance in Sri Lanka"
+          "src": "assets/images/nuwaraeliya 7.jpg",
+          "alt": "Tea-country elegance at the heart of the wellness circuit"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "Luxury southern coast stop on a wellness circuit"
+          "src": "assets/images/yala 1.jpg",
+          "alt": "Safari variety added to the longer wellness route"
+        },
+        {
+          "src": "assets/images/galle 4.jpg",
+          "alt": "Historic southern coast stop on a luxury circuit"
+        },
+        {
+          "src": "assets/images/mirissa 2.jpg",
+          "alt": "Restful beach atmosphere for the coastal wellness finish"
         }
       ],
       "related_slugs": [
@@ -1492,12 +1544,16 @@
       "destination": "Southern Coast",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "South-coast beach atmosphere in Sri Lanka"
+          "src": "assets/images/mirissa 1.jpg",
+          "alt": "South-coast beach atmosphere in Mirissa"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Ocean-facing route with tropical Sri Lankan scenery"
+          "src": "assets/images/galle 2.jpg",
+          "alt": "Historic Galle coast on a quick beach escape"
+        },
+        {
+          "src": "assets/images/mirissa 2.jpg",
+          "alt": "Tropical sea views along the southern shore"
         }
       ],
       "related_slugs": [
@@ -1601,12 +1657,16 @@
       "destination": "Southern Coast",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "Bentota and south-coast beach life"
+          "src": "assets/images/mirissa 3.jpg",
+          "alt": "South-coast beach life on the five-day route"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Sunny Sri Lankan coastline with tropical sea color"
+          "src": "assets/images/galle 3.jpg",
+          "alt": "Galle and Hikkaduwa heritage-coast mix"
+        },
+        {
+          "src": "assets/images/mirissa 4.jpg",
+          "alt": "Bright water and beach time on the Mirissa loop"
         }
       ],
       "related_slugs": [
@@ -1730,12 +1790,16 @@
       "destination": "Southern Coast",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "South-coast beach circuit in Sri Lanka"
+          "src": "assets/images/galle 4.jpg",
+          "alt": "Historic south-coast character on the week-long beach circuit"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Sri Lankan coast with warm water and tropical light"
+          "src": "assets/images/mirissa 2.jpg",
+          "alt": "Warm-water beach time on Sri Lanka's southern coast"
+        },
+        {
+          "src": "assets/images/galle 5.jpg",
+          "alt": "Galle Fort atmosphere mixed into the coastal itinerary"
         }
       ],
       "related_slugs": [
@@ -1859,12 +1923,20 @@
       "destination": "Southern Coast",
       "gallery": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2y9y6cUNbTKcQ4mU6gxDHFRlce7_gXIRiR34eWVmvx6q8At8VIeNcuJ4YyXuwgRxrsu_oirCRiJvdcWoIj0GxxfmVHJg3dibqd2SYYFQ9EwVmGYgRfQOyooRhUgnBXTadetptwVjH3RcuaD1CAHHQAH_neKZAvBIGPM14NRtr-6KXKnJqQeCQykCplewfEnWY9Ms5fZK4r3K4ut1Y57_oIPXI2dG2hb8QqoFtBJqokCAz8RKNNSIPj6p0QJB5Ofm3lGx7Lq_oPQ",
-          "alt": "Sri Lanka's southern beaches on a longer coastal itinerary"
+          "src": "assets/images/galle 6.jpg",
+          "alt": "Southern beaches and heritage on the longer coastal itinerary"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFptO5pR9evE1LZqy_nCwrwZenwfKrW_fQcsYgVgeZRox6HeRtEEyxvG5DaKrLmQFml_ChLpysMfVblAPtNioukOa03GhYEwws771iF-Tq_VuKCia1t_aHsOs3LG-7Okh0yXCrDXYYWST7aeUM9bdmwmeXz36fYdIAu8shbx3X5L-C4aGpKGT6MrnpeA-RVpbPXJrR_kd7di9wkf9CObOH7zAMRlQW4F1EG5I_FvSNsLB2JhraQHxNZmbdWW9C_OJfG_xiaRGg9TM",
-          "alt": "Indian Ocean coastline and tropical travel mood in Sri Lanka"
+          "src": "assets/images/mirissa 3.jpg",
+          "alt": "Indian Ocean coastline and tropical travel mood in Mirissa"
+        },
+        {
+          "src": "assets/images/mirissa 4.jpg",
+          "alt": "Beach relaxation and marine-excursion mood on the south coast"
+        },
+        {
+          "src": "assets/images/galle 2.jpg",
+          "alt": "Galle as a heritage stop on the grand beach circuit"
         }
       ],
       "related_slugs": [
